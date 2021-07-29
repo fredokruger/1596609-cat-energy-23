@@ -1,12 +1,13 @@
 //Глобальные
 @import "global/fonts.scss";
 @import "global/variables.scss";
-@import "global/box-sizing.scss";
+@import "global/defaults.scss";
 //Блоки
 @import "blocks/page.scss";
 @import "blocks/visually-hidden.scss";
-@import "blocks/button.scss";
 @import "blocks/page-header.scss";
+@import "blocks/nav-toggle.scss";
+@import "blocks/button.scss";
 @import "blocks/container.scss";
 @import "blocks/logo-link.scss";
 @import "blocks/main-nav.scss";

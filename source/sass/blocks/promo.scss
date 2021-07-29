@@ -1,12 +1,13 @@
 .promo__container {
   padding-top: 27px;
   padding-bottom: 22px;
-  background: url("/source/img/main-background-mask-mobile.png") no-repeat, url("/source/img/main-background-mobile.jpg") no-repeat;
+  background: url("../../img/main-background-mask-mobile.png") no-repeat, url("../../img/main-background-mobile.jpg") no-repeat;
   background-size: contain;
 }
 
 .promo__title {
   margin: 0;
+  font-family: var(--special-font);
   font-weight: 400;
   text-align: center;
   font-size: 36px;
@@ -16,6 +17,7 @@
 }
 
 .promo__slogan {
+  font-family: var(--special-font);
   text-align: center;
   font-size: 14px;
   line-height: 14px;
