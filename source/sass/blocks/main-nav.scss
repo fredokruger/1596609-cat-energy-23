@@ -1,5 +1,5 @@
 .main-nav {
-  //display: none;
+  display: none;
   position: absolute;
   width: 100%;
   top: 100%;
@@ -48,7 +48,7 @@
 
   &--current {
     cursor: default;
-    text-decoration: underline solid var(--basic-green) 2px;
+    text-decoration: underline solid var(--basic-button) 2px;
     text-underline-offset: 3px;
   }
 }

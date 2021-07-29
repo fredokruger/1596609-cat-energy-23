@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 18px;
+  width: 280px;
+  padding: 10px;
+  background-color: var(--basic-button);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--basic-background);
+  transition: all 0.1s;
+
+  &:hover {
+    background-color: var(--special-button);
+  }
+
+  &:active {
+    color: rgba(var(--special-background-rgb), 0.3);
+  }
+}
