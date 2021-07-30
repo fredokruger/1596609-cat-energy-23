@@ -1,11 +1,6 @@
 .main-nav {
   display: none;
-  position: absolute;
   width: 100%;
-  top: 100%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
   background-color: var(--basic-background);
 
   &--visible {
@@ -42,15 +37,15 @@
   padding-top: 22px;
   padding-bottom: 24px;
 
-  &:hover:not(.main-nav__link--current) {
+  &:hover:not(.main-nav__link[aria-current="page"]) {
     opacity: 0.6;
   }
 
-  &:active:not(.main-nav__link--current) {
+  &:active:not(.main-nav__link[aria-current="page"]) {
     opacity: 0.3;
   }
 
-  &--current {
+  &[aria-current="page"] {
     cursor: default;
     text-decoration: underline solid var(--basic-button) 2px;
     text-underline-offset: 12px;

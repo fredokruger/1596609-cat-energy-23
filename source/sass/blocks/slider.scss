@@ -1,0 +1,45 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.slider__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  margin: 0 auto;
+}
+
+.slider__range {
+  display: flex;
+  align-items: center;
+}
+
+.slider__scale {
+  width: 84px;
+  height: 14px;
+  background-color: var(--basic-background);
+  border: 1px solid var(--special-border);
+  border-radius: 6px;
+  padding: 4px 6px;
+  margin: 0 17px;
+}
+
+.slider__handle {
+  height: 100%;
+  width: 35px;
+  background-color: var(--basic-button);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.slider__condition {
+  font-family: var(--special-font);
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--special-fcolor);
+}

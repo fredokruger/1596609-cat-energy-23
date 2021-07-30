@@ -10,3 +10,12 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.page-header__main-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+}

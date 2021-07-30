@@ -12,5 +12,9 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
+}
+
+.page__leveler {
+  margin-left: 20px;
+  margin-right: calc(20px - (100vw - 100%));
 }
