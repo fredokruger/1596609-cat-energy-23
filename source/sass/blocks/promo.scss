@@ -1,8 +1,22 @@
 .promo__container {
   padding-top: 27px;
   padding-bottom: 22px;
-  background: url("../../img/main-background-mask-mobile.png") no-repeat, url("../../img/main-background-mobile.jpg") no-repeat;
-  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background: url("../../img/main-background-mask-mobile.png") repeat-x top center, url("../../img/main-background-mobile.jpg") no-repeat top center, linear-gradient(to right, #4e4d53 50%, #444348 100%) top center;
+    background-size: contain;
+    min-width: 320px;
+    width: 100%;
+    height: 302px;
+  }
 }
 
 .promo__title {
