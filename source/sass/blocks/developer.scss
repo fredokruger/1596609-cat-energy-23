@@ -1,0 +1,48 @@
+.developer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 22px;
+  padding-bottom: 19px;
+}
+
+.developer__link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: inherit;
+  white-space: nowrap;
+  position: relative;
+  transition: all 0.1s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    bottom: -7px;
+    right: -7px;
+    left: -7px;
+  }
+
+  &--icon {
+    position: relative;
+    margin-left: 140px;
+    display: inline-flex;
+
+    &::after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      mask: url("../../img/htmlacademy.svg") 50% 50% / contain no-repeat;
+      background-color: var(--developer-color);
+    }
+
+    &:hover::after {
+      background-color: var(--basic-button);
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

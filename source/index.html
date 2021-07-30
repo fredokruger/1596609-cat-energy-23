@@ -16,9 +16,11 @@
   <header class="page-header">
     <div class="page-header__container page__leveler">
       <a class="logo-link" href="index.html" aria-current="page">
+        <span class="visually-hidden">Ссылка на главную страницу</span>
         <img class="logo-image" src="img/logo-mobile.svg" alt="Логотип продукта" width="34" height="38">
       </a>
       <a class="logo-link" href="index.html" aria-current="page">
+        <span class="visually-hidden">Ссылка на главную страницу</span>
         <img class="logo-image" src="img/logo-text.svg" alt="Логотип продукта" width="101" height="18">
       </a>
       <button class="nav-toggle">
@@ -132,11 +134,11 @@
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <div class="page__leveler">
-        <h3 class="contacts__subtitle">Приглашаем к сотрудничеству дилеров!</h3>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="contacts__container page__leveler">
+        <p class="contacts__subtitle">Приглашаем <br>к сотрудничеству <br>дилеров!</p>
+        <p class="contacts__adress">ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург</p>
       </div>
-      <noscript><img class="contacts__map" src="img/map-mobile.png" alt="Карта с адресом" width="320"
+      <noscript><img class="contacts__map-image" src="img/map-desktop.png" alt="Карта с адресом" width="320"
           height="362"></noscript>
       <iframe class="contacts__map" width="320" height="362"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627402720056!5m2!1sru!2sru"
@@ -144,20 +146,24 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page__leveler">
+    <div class="footer__container page__leveler">
       <div class="page-footer__logo-container">
-        <a class="page-footer__logo-link"><img class="page-footer__logo-image" src="img/logo-text.svg"
-            alt="Логотип кродукта" width="128" height="24"></a>
+        <a class="logo-link" href="index.html" aria-current="page"><img class="page-footer__logo-image"
+            src="img/logo-text.svg" alt="Логотип кродукта" width="128" height="24"><span class="visually-hidden">Ссылка
+            на главную страницу</span></a>
       </div>
-      <div class="social">
-        <a class="social__link" href="#">Вконтакте</a>
-        <a class="social__link" href="#">Инстаграм</a>
-        <a class="social__link" href="#">Фэйсбук</a>
-      </div>
+      <ul class="social">
+        <li class="social__item"><a class="social__link social__link--vk" href="#"><span
+              class="visually-hidden">Вконтакте</span></a></li>
+        <li class="social__item"><a class="social__link social__link--inst" href="#"><span
+              class="visually-hidden">Инстаграм</span></a></li>
+        <li class="social__item"><a class="social__link social__link--fb" href="#"><span
+              class="visually-hidden">Фейсбук</span></a></li>
+      </ul>
       <div class="developer">
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg"
-            alt="Логотип компании HTML Academy" class="developer__icon" width="27" height="34"></a>
+        <a class="developer__link developer__link--icon" href="https://htmlacademy.ru/intensive/adaptive"><span
+            class="visually-hidden">Логотип-ссылка компании Html Academy</span></a>
       </div>
     </div>
   </footer>

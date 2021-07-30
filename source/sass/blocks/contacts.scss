@@ -1,0 +1,39 @@
+.contacts {
+  position: relative;
+  padding-top: 114px;
+}
+
+.contacts__container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 28px 20px 26px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__subtitle {
+  font-family: var(--special-font);
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--special-fcolor);
+  margin: 0;
+}
+
+.contacts__adress {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.contacts__map__image {
+  width: 100vw;
+  height: auto;
+  background-size: contain;
+}
+
+.contacts__map {
+  width: 100vw;
+  border: none;
+}
