@@ -1,6 +1,10 @@
 .contacts {
   position: relative;
   padding-top: 114px;
+
+  &--catalog {
+    background-color: var(--special-background);
+  }
 }
 
 .contacts__container {
