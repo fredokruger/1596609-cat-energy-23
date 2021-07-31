@@ -1,0 +1,28 @@
+.select-program {
+  border-top: 1px solid var(--basic-border);
+}
+
+.select-program__container {
+  padding-top: 27px;
+  padding-bottom: 32px;
+}
+
+.select-program__title {
+  font-family: var(--special-font);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--special-fcolor);
+  margin: 0;
+  margin-bottom: 37px;
+}
+
+.select-program__info {
+  font-family: var(--special-font);
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--special-fcolor);
+  margin: 0;
+  margin-bottom: 39px;
+  text-transform: uppercase;
+}

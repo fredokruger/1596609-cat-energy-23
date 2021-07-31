@@ -44,93 +44,114 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Подобрать индивидуальную программу питания Pro Energy для кота</h1>
-    <section class="select-programm">
-      <div class="page__leveler">
-        <h2 class="select-programm__title">Подбор программы</h2>
-        <p class="select-programm__info">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <section class="select-program">
+      <div class="select-program__container">
+        <div class="page__leveler">
+          <h2 class="select-program__title">Подбор программы</h2>
+          <p class="select-program__info">Заполните анкету, и мы подберем <br>программу питания для вашего кота</p>
+        </div>
         <form class="select-form" method="POST" action="https://echo.htmlacademy.ru">
           <fieldset class="select-form__group select-form__group--personal">
-            <legend class="visually-hidden">Личные данные кота</legend>
-            <div class="select-form__item">
-              <label class="select-form__personal" for="personal-name">Имя:*</label>
-              <input class="select-form__input-personal" id="personal-name" type="text" name="name" placeholder="Барсик"
-                required>
-            </div>
-            <div class="select-form__item">
-              <label class="select-form__personal" for="personal-weight">Вес (кг):*</label>
-              <input class="select-form__input-personal" id="personal-weight" type="number" name="weight"
-                placeholder="7" required>
-            </div>
-            <div class="select-form__item">
-              <label class="select-form__personal" for="personal-age">Возраст (лет):*</label>
-              <input class="select-form__input-personal" id="personal-age" type="number" name="age" placeholder="7">
+            <div class="page__leveler">
+              <legend class="visually-hidden">Личные данные кота</legend>
+              <div class="select-form__item--personal">
+                <label class="select-form__personal" for="personal-name">Имя:*</label>
+                <input class="select-form__input-personal" id="personal-name" type="text" name="name"
+                  placeholder="Барсик" minlength="2" required>
+              </div>
+              <div class="select-form__item--personal">
+                <label class="select-form__personal" for="personal-weight">Вес (кг):*</label>
+                <input class="select-form__input-personal" id="personal-weight" type="number" name="weight"
+                  placeholder="7" max="99" required>
+              </div>
+              <div class="select-form__item--personal">
+                <label class="select-form__personal" for="personal-age">Возраст (лет)</label>
+                <input class="select-form__input-personal" id="personal-age" type="number" name="age" max="99"
+                  placeholder="7">
+              </div>
             </div>
           </fieldset>
           <fieldset class="select-form__group select-form__group--porpose">
-            <legend class="visually-hidden">Цель питания</legend>
-            <div class="select-form__item">
-              <input class="select-form__check-porpose visually-hidden" id="porpose-slim" type="radio" name="porpose"
-                value="slim" checked>
-              <label class="select-form__porpose" for="porpose-slim">Похудение</label>
-            </div>
-            <div class="select-form__item">
-              <input class="select-form__check-porpose visually-hidden" id="porpose-pro" type="radio" name="porpose"
-                value="pro">
-              <label class="select-form__porpose" for="porpose-pro">Набор массы</label>
-            </div>
-            <div class="select-form__item">
-              <input class="select-form__check-porpose visually-hidden" id="porpose-help" type="radio" name="porpose"
-                value="help">
-              <label class="select-form__porpose" for="porpose-help">Не знаю (нужен ваш совет)</label>
+            <div class="page__leveler">
+              <legend class="visually-hidden">Цель питания</legend>
+              <div class="select-form__item select-form__item--porpose">
+                <input class="select-form__check-porpose visually-hidden" id="porpose-slim" type="radio" name="porpose"
+                  value="slim" checked>
+                <label class="select-form__porpose" for="porpose-slim">Похудение</label>
+              </div>
+              <div class="select-form__item select-form__item--porpose">
+                <input class="select-form__check-porpose visually-hidden" id="porpose-pro" type="radio" name="porpose"
+                  value="pro">
+                <label class="select-form__porpose" for="porpose-pro">Набор массы</label>
+              </div>
+              <div class="select-form__item select-form__item--porpose">
+                <input class="select-form__check-porpose visually-hidden" id="porpose-help" type="radio" name="porpose"
+                  value="help">
+                <label class="select-form__porpose" for="porpose-help">Не знаю (нужен ваш совет)</label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="select-form__group select-form__group--contact">
-            <legend class="select-form__group-title">Контактные данные (владельца кота)</legend>
-            <div class="select-form__item">
-              <label class="select-form__contact" for="contact-email">E-mail:*</label>
-              <input class="select-form__input-contact" id="contact-email" type="email" name="email"
-                placeholder="kuklachev@gmail.com" required>
-            </div>
-            <div class="select-form__item">
-              <label class="select-form__contact" for="contact-tel">Телефон:*</label>
-              <input class="select-form__input-contact" id="contact-tel" type="tel" name="tel"
-                placeholder="8 (960) 900-60-90" required>
+            <div class="page__leveler">
+              <legend class="select-form__group-title select-form__group-title--contact">Контактные данные (владельца
+                кота)</legend>
+              <div class="select-form__item select-form__item--contact">
+                <label class="select-form__contact select-form__contact--email">E-mail:*
+                  <input class="select-form__input-contact" type="email" name="email" placeholder="kuklachev@gmail.com"
+                    required><span class="select-form__icon-contact select-form__icon-contact--email"></span></label>
+              </div>
+              <div class="select-form__item select-form__item--contact">
+                <label class="select-form__contact select-form__contact--tel">Телефон:*
+                  <input class="select-form__input-contact" type="tel" name="tel" placeholder="8 (960) 900-60-90"
+                    required><span class="select-form__icon-contact select-form__icon-contact--tel"></span></label>
+              </div>
             </div>
           </fieldset>
           <div class="select-form__group select-form__group--comment">
-            <label class="select-form__comment" for="comment-info">Комментарий</label>
-            <textarea class="select-form__input-comment" id="comment-info" name="comment"
-              placeholder="Расскажите о всех повадках кота"></textarea>
+            <div class="page__leveler">
+              <div class="select-form__item select-form__item--comment">
+                <label class="select-form__group-title select-form__group-title--comment"
+                  for="comment-info">Комментарий</label>
+                <textarea class="select-form__input-comment" id="comment-info" name="comment"
+                  placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
+            </div>
           </div>
           <fieldset class="select-form__group select-form__group--additional">
-            <legend class="select-form__group-title">Дополнительно</legend>
-            <div class="select-form__item">
-              <input class="select-form__check-additional visually-hidden" id="additional-sugar" type="checkbox"
-                name="sugar" checked>
-              <label class="select-form__additional" for="additional-sugar">Сахарозаменитель</label>
-            </div>
-            <div class="select-form__item">
-              <input class="select-form__check-additional visually-hidden" id="additional-water" type="checkbox"
-                name="water">
-              <label class="select-form__additional" for="additional-water">Питьевая вода</label>
-            </div>
-            <div class="select-form__item">
-              <input class="select-form__check-additional visually-hidden" id="additional-milk" type="checkbox"
-                name="milk">
-              <label class="select-form__additional" for="additional-milk">Молоко</label>
-            </div>
-            <div class="select-form__item">
-              <input class="select-form__check-additional visually-hidden" id="additional-vitamin" type="checkbox"
-                name="vitamin">
-              <label class="select-form__additional" for="additional-vitamin">Витамины</label>
+            <div class="page__leveler">
+              <legend class="select-form__group-title select-form__group-title--additional">Дополнительно</legend>
+              <div class="select-form__item select-form__item--additional">
+                <input class="select-form__check-additional visually-hidden" id="additional-sugar" type="checkbox"
+                  name="sugar" checked>
+                <label class="select-form__additional" for="additional-sugar">Сахарозаменитель</label>
+              </div>
+              <div class="select-form__item select-form__item--additional">
+                <input class="select-form__check-additional visually-hidden" id="additional-water" type="checkbox"
+                  name="water">
+                <label class="select-form__additional" for="additional-water">Питьевая вода</label>
+              </div>
+              <div class="select-form__item select-form__item--additional">
+                <input class="select-form__check-additional visually-hidden" id="additional-milk" type="checkbox"
+                  name="milk">
+                <label class="select-form__additional" for="additional-milk">Молоко</label>
+              </div>
+              <div class="select-form__item select-form__item--additional">
+                <input class="select-form__check-additional visually-hidden" id="additional-vitamin" type="checkbox"
+                  name="vitamin">
+                <label class="select-form__additional" for="additional-vitamin">Витамины</label>
+              </div>
             </div>
           </fieldset>
-          <button class="select-form__button button" type="submit">Отправить заявку</button>
-          <span>*—Обязательные поля</span>
+          <div class="page__leveler">
+            <div class="select-form__item select-form__item--submit">
+              <button class="select-form__button button button--submit" type="submit">Отправить заявку</button>
+              <span class="select-form__attention-info">* — Обязательные поля</span>
+            </div>
+          </div>
         </form>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--grey">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <div class="contacts__container page__leveler">
         <p class="contacts__subtitle">Приглашаем <br>к сотрудничеству <br>дилеров!</p>

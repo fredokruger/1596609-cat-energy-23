@@ -1,0 +1,400 @@
+.select-form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &--personal {
+    margin-bottom: 10px;
+  }
+
+  &--porpose {
+    padding-top: 22px;
+    padding-bottom: 20px;
+    border-top: 1px solid var(--basic-border);
+    border-bottom: 1px solid var(--basic-border);
+    margin-bottom: 26px;
+  }
+
+  &--contact {
+    position: relative;
+    margin-bottom: 9px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 221px;
+      height: 10px;
+      background-color: var(--basic-background);
+      z-index: -1;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 15px;
+      width: 100%;
+      height: 2px;
+      background-color: var(--special-button);
+      z-index: -2;
+    }
+  }
+
+  &--comment {
+    position: relative;
+    margin-bottom: 23px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 163px;
+      height: 10px;
+      background-color: var(--basic-background);
+      z-index: -1;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 15px;
+      width: 100%;
+      height: 2px;
+      background-color: var(--special-button);
+      z-index: -2;
+    }
+  }
+
+  &--additional {
+    position: relative;
+    margin-bottom: 34px;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 184px;
+      height: 10px;
+      background-color: var(--basic-background);
+      z-index: -1;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 15px;
+      width: 100%;
+      height: 2px;
+      background-color: var(--special-button);
+      z-index: -2;
+    }
+  }
+}
+
+.select-form__item {
+  &--personal,
+  &--contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  &--porpose:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  &--comment {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--additional:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  &--submit {
+    display: flex;
+    flex-direction: column;
+  }
+}
+//Имя, возраст, вес
+.select-form__personal {
+  font-family: var(--special-font);
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-right: 12px;
+}
+
+.select-form__input-personal {
+  padding: 13px 40px 13px 16px;
+  border: 1px solid var(--form-border);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: var(--special-font);
+  color: inherit;
+  transition: all 0.1s;
+  outline: none;
+  width: 100%;
+  flex: 1;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:hover {
+    border: 1px solid var(--special-border);
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid var(--basic-fcolor);
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding-left: 15px;
+  }
+}
+//Цель приема
+.select-form__porpose {
+  display: flex;
+  align-items: center;
+  font-family: var(--special-font);
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--additional-fcolor);
+  position: relative;
+  transition: all 0.1s;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--basic-border);
+    margin-right: 15px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 13.5px;
+    height: 13.5px;
+    border-radius: 50%;
+    left: 8.25px;
+  }
+
+  .select-form__check-porpose:checked ~ &::after {
+    background-color: var(--basic-button);
+  }
+
+  &:hover::before {
+    border: 1px solid var(--radio-border);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+//Телефон и почта
+.select-form__group-title {
+  font-family: var(--special-font);
+  font-size: 24px;
+  line-height: 26px;
+  color: var(--special-fcolor);
+  margin: 0;
+  width: 188px;
+
+  &--contact {
+    margin-bottom: 35px;
+  }
+
+  &--comment {
+    margin-bottom: 38px;
+  }
+
+  &--additional {
+    margin-bottom: 34px;
+  }
+}
+
+.select-form__contact {
+  font-family: var(--special-font);
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.select-form__input-contact {
+  padding: 13px 40px 13px 16px;
+  border: 1px solid var(--form-border);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: var(--special-font);
+  color: inherit;
+  transition: all 0.1s;
+  outline: none;
+  width: 100%;
+  flex: 1;
+  margin-left: 11px;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:hover {
+    border: 1px solid var(--special-border);
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid var(--basic-fcolor);
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding-left: 15px;
+  }
+
+  &:focus ~ .select-form__icon-contact::before {
+    background-color: var(--basic-button);
+  }
+}
+
+.select-form__icon-contact {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  &--email {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 15px;
+      margin: auto 0;
+      width: 20px;
+      height: 14px;
+      mask: url("../../img/email-icon.svg") no-repeat 50% 50%;
+      background-color: var(--additional-fcolor);
+      cursor: default;
+    }
+  }
+
+  &--tel {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 15px;
+      margin: auto 0;
+      width: 20px;
+      height: 20px;
+      mask: url("../../img/phone-icon.svg") no-repeat 50% 50%;
+      background-color: var(--additional-fcolor);
+    }
+  }
+}
+//Комментарий
+
+.select-form__input-comment {
+  padding: 13px 16px;
+  border: 1px solid var(--form-border);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: var(--special-font);
+  color: inherit;
+  transition: all 0.1s;
+  outline: none;
+  height: 150px;
+  resize: none;
+  white-space: nowrap;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:hover {
+    border: 1px solid var(--special-border);
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid var(--basic-fcolor);
+    padding: 12px 15px;
+  }
+}
+//Дополнительно
+.select-form__additional {
+  display: flex;
+  align-items: center;
+  font-family: var(--special-font);
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--special-fcolor);
+  position: relative;
+  transition: all 0.1s;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--basic-border);
+    margin-right: 15px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    left: 2px;
+    background: url("../../img/check.svg") no-repeat 50% 50%;
+    opacity: 0;
+    transition: all 0.1s;
+  }
+
+  .select-form__check-additional:checked ~ &::after {
+    opacity: 1;
+  }
+
+  &:hover::before {
+    border: 1px solid var(--radio-border);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+//Кнопка
+.select-form__button {
+  margin-bottom: 21px;
+}
+
+.select-form__attention-info {
+  width: 280px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--special-fcolor);
+}
