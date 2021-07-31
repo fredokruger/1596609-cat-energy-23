@@ -20,4 +20,17 @@
   &:active {
     color: rgba(var(--special-background-rgb), 0.3);
   }
+
+  &--show-more {
+    background-color: var(--special-background);
+    color: inherit;
+
+    &:hover {
+      background-color: var(--additional-background);
+    }
+
+    &:active {
+      color: rgba(var(--basic-fcolor-rgb), 0.3);
+    }
+  }
 }
