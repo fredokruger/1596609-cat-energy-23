@@ -10,11 +10,11 @@
   background-color: var(--basic-background);
   display: flex;
   flex-direction: column;
-  width: 100%;
   min-height: 100vh;
+  width: 100%;
 }
 
 .page__leveler {
   margin-left: 20px;
-  margin-right: calc(20px - (100vw - 100%));
+  margin-right: calc(20px - 100vw + 100%);
 }

@@ -6,8 +6,11 @@
 .contacts__container {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 100%;
-  padding: 28px 20px 26px 0;
+  padding: 28px 20px 26px;
   display: flex;
   justify-content: space-between;
 }
@@ -28,12 +31,12 @@
 }
 
 .contacts__map__image {
-  width: 100vw;
+  width: 100%;
   height: auto;
   background-size: contain;
 }
 
 .contacts__map {
-  width: 100vw;
+  width: 100%;
   border: none;
 }

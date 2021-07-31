@@ -20,20 +20,20 @@
     position: absolute;
     top: -7px;
     bottom: -7px;
-    right: -7px;
-    left: -7px;
+    right: 0;
+    left: 0;
   }
 
   &--icon {
     position: relative;
-    margin-left: 140px;
+    margin-left: 139px;
     display: inline-flex;
 
     &::after {
       content: "";
-      width: 40px;
-      height: 40px;
-      mask: url("../../img/htmlacademy.svg") 50% 50% / contain no-repeat;
+      width: 27px;
+      height: 34px;
+      mask: url("../../img/htmlacademy.svg") 50% 50% / cover no-repeat;
       background-color: var(--developer-color);
     }
 
