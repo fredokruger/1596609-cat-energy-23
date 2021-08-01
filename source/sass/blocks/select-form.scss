@@ -204,6 +204,15 @@
     outline-offset: 2px;
   }
 
+  .select-form__check-porpose:not(:focus-visible) ~ &::before {
+    outline: none;
+  }
+
+  .select-form__check-porpose:focus-visible ~ &::before {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
+  }
+
   &:hover::before {
     border: 1px solid var(--radio-border);
   }
@@ -384,6 +393,15 @@
   }
 
   .select-form__check-additional:focus ~ &::before {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
+  }
+
+  .select-form__check-additional:not(:focus-visible) ~ &::before {
+    outline: none;
+  }
+
+  .select-form__check-additional:focus-visible ~ &::before {
     outline: 2px solid var(--special-fcolor);
     outline-offset: 2px;
   }
