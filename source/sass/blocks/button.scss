@@ -21,6 +21,11 @@
     color: rgba(var(--special-background-rgb), 0.3);
   }
 
+  &:focus {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
+  }
+
   &--show-more {
     background-color: var(--special-background);
     color: inherit;

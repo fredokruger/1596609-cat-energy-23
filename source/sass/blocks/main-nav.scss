@@ -1,6 +1,5 @@
 .main-nav {
   display: none;
-  width: 100%;
   background-color: var(--basic-background);
 
   &--visible {
@@ -15,7 +14,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 13px;
 }
 
 .main-nav__item {
@@ -43,6 +41,10 @@
 
   &:active:not(.main-nav__link[aria-current="page"]) {
     opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 2px solid var(--special-fcolor);
   }
 
   &[aria-current="page"] {

@@ -18,33 +18,56 @@
   display: flex;
   align-items: center;
   transition: all 0.1s;
+  position: relative;
+  width: 30px;
+  height: 30px;
 
-  &:hover {
+  &:hover::after {
     background-color: var(--basic-button);
   }
 
   &:active {
     opacity: 0.3;
   }
+
+  &:focus {
+    outline: 2px solid var(--special-fcolor);
+
+    &::after {
+      background-color: var(--basic-button);
+    }
+  }
 }
 
 .social__link--vk {
-  width: 30px;
-  height: 30px;
-  mask: url("../../img/vk-icon.svg") 50% 50% no-repeat;
-  background-color: var(--developer-color);
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mask: url("../../img/vk-icon.svg") 50% 50% no-repeat;
+    background-color: var(--developer-color);
+  }
 }
 
 .social__link--inst {
-  width: 30px;
-  height: 30px;
-  mask: url("../../img/instagram-icon.svg") 50% 50% no-repeat;
-  background-color: var(--developer-color);
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mask: url("../../img/instagram-icon.svg") 50% 50% no-repeat;
+    background-color: var(--developer-color);
+  }
 }
 
 .social__link--fb {
-  width: 30px;
-  height: 30px;
-  mask: url("../../img/facebook-icon.svg") 50% 50% no-repeat;
-  background-color: var(--developer-color);
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mask: url("../../img/facebook-icon.svg") 50% 50% no-repeat;
+    background-color: var(--developer-color);
+  }
 }

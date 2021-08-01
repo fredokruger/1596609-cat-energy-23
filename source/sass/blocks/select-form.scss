@@ -199,6 +199,11 @@
     background-color: var(--basic-button);
   }
 
+  .select-form__check-porpose:focus ~ &::before {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
+  }
+
   &:hover::before {
     border: 1px solid var(--radio-border);
   }
@@ -376,6 +381,11 @@
 
   .select-form__check-additional:checked ~ &::after {
     opacity: 1;
+  }
+
+  .select-form__check-additional:focus ~ &::before {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
   }
 
   &:hover::before {

@@ -12,11 +12,24 @@
     left: -7px;
   }
 
+  &--text-header {
+    width: 101px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0 auto;
+  }
+
   &:hover {
     opacity: 0.8;
   }
 
   &:active {
     opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
   }
 }

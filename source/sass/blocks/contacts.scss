@@ -43,4 +43,9 @@
 .contacts__map {
   width: 100%;
   border: none;
+
+  &:focus {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
+  }
 }
