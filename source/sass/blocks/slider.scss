@@ -11,14 +11,25 @@
   right: 0;
   bottom: 50px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 45px;
+  }
 }
 
 .slider__range {
   display: flex;
+  position: relative;
   align-items: center;
+  margin-top: auto;
 }
 
 .slider__scale {
+  display: flex;
   width: 84px;
   height: 14px;
   background-color: var(--basic-background);
@@ -26,14 +37,53 @@
   border-radius: 6px;
   padding: 4px 6px;
   margin: 0 17px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 6px;
+    background-color: var(--special-border);
+    padding: 0;
+  }
 }
 
 .slider__handle {
   height: 100%;
-  width: 35px;
+  width: 50%;
   background-color: var(--basic-button);
   border-radius: 6px;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--basic-background);
+    border: 1px solid var(--special-border);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      width: 8px;
+      height: 8px;
+      background-color: var(--basic-button);
+      border-radius: 50%;
+    }
+  }
 }
 
 .slider__condition {
@@ -42,4 +92,9 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--special-fcolor);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

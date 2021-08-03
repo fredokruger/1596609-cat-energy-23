@@ -102,31 +102,39 @@
         <div class="example__wrapper">
           <p class="example__subtitle">Живой пример</p>
           <p class="example__info">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по‑прежнему спит по 16
             часов в день.</p>
           <dl class="example__stats-list">
             <div class="example__stats-container">
               <div class="example__stats-item">
-                <dt class="example__stats-description">снижение <br>веса</dt>
+                <dt class="example__stats-description">снижение веса</dt>
                 <dd class="example__stats-amount">5 кг</dd>
               </div>
               <div class="example__stats-item">
-                <dt class="example__stats-description">затрачено <br>времени</dt>
+                <dt class="example__stats-description">затрачено времени</dt>
                 <dd class="example__stats-amount">60 дней</dd>
               </div>
             </div>
-            <div class="stats-cost">
-              <dt class="stats-cost__description">Затраты на питание:</dt>
-              <dd class="stats-cost__amount">15 000 руб.</dd>
+            <div class="example__stats-cost">
+              <dt class="example__cost-description">Затраты на питание:</dt>
+              <dd class="example__cost-amount">15 000 руб.</dd>
             </div>
           </dl>
         </div>
         <div class="example__slider slider">
           <div class="slider__images">
-            <img class="slider__image slider__image--before" src="img/condition-before-mobile.png"
-              alt="Состояние кота до приема Cat Energy" width="311" height="232">
-            <img class="slider__image slider__image--after" src="img/condition-after-mobile.png"
-              alt="Состояние кота до приема Cat Energy" width="251" height="240">
+            <picture>
+              <source srcset="img/condition-before-desktop.png" media="(min-width: 1440px)">
+              <source srcset="img/condition-before-tablet.png" media="(min-width: 768px)">
+              <img class="slider__image slider__image--before" src="img/condition-before-mobile.png"
+                alt="Состояние кота до приема Cat Energy">
+            </picture>
+            <picture>
+              <source srcset="img/condition-after-desktop.png" media="(min-width: 1440px)">
+              <source srcset="img/condition-after-tablet.png" media="(min-width: 768px)">
+              <img class="slider__image slider__image--after" src="img/condition-after-mobile.png"
+                alt="Состояние кота до приема Cat Energy">
+            </picture>
           </div>
           <div class="slider__range">
             <span class="slider__condition">Было</span>
