@@ -4,6 +4,10 @@
   justify-content: center;
   padding-top: 22px;
   padding-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .developer__link {
@@ -24,10 +28,15 @@
     left: 0;
   }
 
-  &--icon {
+  &:nth-child(2) {
     position: relative;
     margin-left: 139px;
     display: inline-flex;
+    transition: all 0.1s;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 22px;
+    }
 
     &::after {
       content: "";
@@ -36,22 +45,20 @@
       mask: url("../../img/htmlacademy.svg") 50% 50% / cover no-repeat;
       background-color: var(--developer-color);
     }
-
-    &:hover::after {
-      background-color: var(--basic-button);
-    }
   }
 
+  &:hover ~ &:nth-child(2)::after,
+  &:hover::after {
+    background-color: var(--basic-button);
+  }
+
+  &:active ~ &:nth-child(2)::after,
   &:active {
     opacity: 0.3;
   }
 
   &:focus {
     outline: 2px solid var(--special-fcolor);
-
-    &::after {
-      background-color: var(--basic-button);
-    }
   }
 
   &:not(:focus-visible) {
@@ -61,9 +68,5 @@
   &:focus-visible {
     outline: 2px solid var(--special-fcolor);
     outline-offset: 2px;
-
-    &::after {
-      background-color: var(--basic-button);
-    }
   }
 }

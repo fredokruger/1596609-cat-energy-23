@@ -25,19 +25,37 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 570px;
     top: 95px;
+    left: 110px;
+  }
+}
+
+.contacts__leveler {
+  margin-left: 20px;
+  margin-right: calc(20px - 100vw + 100%);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 30px;
+    margin-right: calc(30px - 100vw + 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
 .contacts__inner-container {
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
   @media (min-width: $desktop-width) {
-    padding: 66px 89px 60px 76px;
+    align-items: center;
+    min-height: 201px;
+    padding-left: 76px;
+    padding-right: 89px;
     background-color: var(--basic-background);
-    width: 570px;
   }
 }
 
