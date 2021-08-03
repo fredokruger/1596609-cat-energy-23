@@ -15,13 +15,12 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__container page__leveler">
-      <picture>
-        <source srcset="img/logo-tablet-desktop.svg" media="(min-width: 768px)">
-        <img src="img/logo-mobile.svg" alt="MDN">
-      </picture>
       <a class="logo-link" href="index.html" aria-current="page">
         <span class="visually-hidden">Ссылка на главную страницу</span>
-        <img class="logo-image" src="img/logo-mobile.svg" alt="Логотип продукта" width="34" height="38">
+        <picture class="logo-image">
+          <source srcset="img/logo-tablet-desktop.svg" media="(min-width: 768px)">
+          <img src="img/logo-mobile.svg" alt="Логотип продукта">
+        </picture>
       </a>
       <a class="logo-link logo-link--text-header" href="index.html" aria-current="page">
         <span class="visually-hidden">Ссылка на главную страницу</span>
@@ -52,8 +51,11 @@
       <div class="promo__container page__leveler">
         <h2 class="promo__title">Функциональное <br>питание для котов</h2>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img class="promo__product" src="img/main-product-mobile.png"
-          alt="Изображение упаковки Cat Energy со вкусом курицы" width="280" height="270">
+        <picture class="promo__product">
+          <source srcset="img/main-product-desktop.png" media="(min-width: 1200px)">
+          <source srcset="img/main-product-tablet.png" media="(min-width: 768px)">
+          <img src="img/main-product-mobile.png" alt="Изображение упаковки Cat Energy со вкусом курицы">
+        </picture>
         <a class="promo__button button" href="form.html">Подобрать программу</a>
       </div>
     </section>

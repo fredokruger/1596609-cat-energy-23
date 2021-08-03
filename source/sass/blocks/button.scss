@@ -13,6 +13,13 @@
   color: var(--basic-background);
   transition: all 0.1s;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 244px;
+    padding: 14px;
+  }
+
   &:hover {
     background-color: var(--special-button);
   }

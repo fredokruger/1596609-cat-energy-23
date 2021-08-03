@@ -18,6 +18,10 @@
     right: 0;
     position: absolute;
     margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &:hover {

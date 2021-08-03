@@ -8,6 +8,10 @@
   text-align: center;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
   &::after {
     content: "";
     position: absolute;
