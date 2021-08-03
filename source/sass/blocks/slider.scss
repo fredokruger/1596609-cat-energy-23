@@ -53,6 +53,7 @@
   background-color: var(--basic-button);
   border-radius: 6px;
   cursor: pointer;
+  transition: all 0.1s;
 
   @media (min-width: $tablet-width) {
     width: 34px;
@@ -82,6 +83,18 @@
       height: 8px;
       background-color: var(--basic-button);
       border-radius: 50%;
+    }
+  }
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+      border: 1px solid var(--radio-border);
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet-width) {
+      border: 1px solid var(--basic-button);
     }
   }
 }
