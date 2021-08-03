@@ -23,8 +23,8 @@
     margin-right: calc(30px - 100vw + 100%);
   }
 
-  @media (min-width: $tablet-width) {
-    margin-left: 80px;
-    margin-right: calc(80px - 100vw + 100%);
+  @media (min-width: $desktop-width) {
+    margin-left: 110px;
+    margin-right: calc(110px - 100vw + 100%);
   }
 }

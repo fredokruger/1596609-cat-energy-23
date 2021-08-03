@@ -3,6 +3,10 @@
   text-decoration: none;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+  }
+
   &::after {
     content: "";
     position: absolute;
