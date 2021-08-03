@@ -1,6 +1,16 @@
 .features__container {
   padding-top: 27px;
   padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 47px;
+    padding-right: 75px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 11px;
+    padding-right: 0;
+  }
 }
 
 .features__subtitle {
@@ -10,20 +20,42 @@
   color: var(--special-fcolor);
   margin: 0;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
 }
 
 .features__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 137px;
+    row-gap: 37px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 70px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 
 .features__item {
   display: flex;
   align-items: center;
+  position: relative;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &::before {
@@ -32,22 +64,64 @@
     margin-right: 20px;
     width: 60px;
     height: 60px;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-right: 0;
+      margin-bottom: 31px;
+    }
   }
 
   &:nth-child(1)::before {
-    background: url("../../img/how-it-works-1.svg") no-repeat;
+    background: url("../../img/how-it-works-1.svg") no-repeat 50% 50% / cover;
   }
 
   &:nth-child(2)::before {
-    background: url("../../img/how-it-works-2.svg") no-repeat;
+    background: url("../../img/how-it-works-2.svg") no-repeat 50% 50% / cover;
   }
 
   &:nth-child(3)::before {
-    background: url("../../img/how-it-works-3.svg") no-repeat;
+    background: url("../../img/how-it-works-3.svg") no-repeat 50% 50% / cover;
   }
 
   &:nth-child(4)::before {
-    background: url("../../img/how-it-works-4.svg") no-repeat;
+    background: url("../../img/how-it-works-4.svg") no-repeat 50% 50% / cover;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      width: 136px;
+      height: 100%;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  &:nth-child(1)::after {
+    @media (min-width: $tablet-width) {
+      background: url("../../img/features-1.png") no-repeat 40% 50% / contain;
+    }
+  }
+
+  &:nth-child(2)::after {
+    @media (min-width: $tablet-width) {
+      background: url("../../img/features-2.png") no-repeat 50% 50% / contain;
+    }
+  }
+
+  &:nth-child(3)::after {
+    @media (min-width: $tablet-width) {
+      background: url("../../img/features-3.png") no-repeat 50% 50% / contain;
+    }
+  }
+
+  &:nth-child(4)::after {
+    @media (min-width: $tablet-width) {
+      background: url("../../img/features-4.png") no-repeat 50% 50% / contain;
+    }
   }
 }
 
@@ -55,4 +129,14 @@
   margin: 0;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 240px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 250px;
+  }
 }
