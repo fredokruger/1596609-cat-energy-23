@@ -15,9 +15,12 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__container page__leveler">
-      <a class="logo-link" href="index.html">
+      <a class="logo-link" href="index.html" aria-current="page">
         <span class="visually-hidden">Ссылка на главную страницу</span>
-        <img class="logo-image" src="img/logo-mobile.svg" alt="Логотип продукта" width="34" height="38">
+        <picture class="logo-image">
+          <source srcset="img/logo-tablet-desktop.svg" media="(min-width: 768px)">
+          <img src="img/logo-mobile.svg" alt="Логотип продукта">
+        </picture>
       </a>
       <a class="logo-link logo-link--text-header" href="index.html">
         <span class="visually-hidden">Ссылка на главную страницу</span>
@@ -153,16 +156,23 @@
     </section>
     <section class="contacts contacts--special-color">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <div class="contacts__container contacts__container--grey">
-        <div class="page__leveler">
+      <div class="contacts__container">
+        <div class="contacts__leveler">
           <div class="contacts__inner-container">
             <p class="contacts__subtitle">Приглашаем <br>к сотрудничеству <br>дилеров!</p>
-            <p class="contacts__adress">ул. Большая <br>Конюшенная, д. 19/8 <br>Санкт-Петербург</p>
+            <p class="contacts__adress">ул. Большая <br>Конюшенная, д. 19/8 <br><span
+                class="contacts__city">Санкт-Петербург</span></p>
           </div>
         </div>
       </div>
-      <noscript><img class="contacts__map-image" src="img/map-desktop.png" alt="Карта с адресом" width="320"
-          height="362"></noscript>
+      </div>
+      <noscript>
+        <picture>
+          <source srcset="img/map-desktop.png" media="(min-width: 1280px)">
+          <source srcset="img/map-tablet.png" media="(min-width: 768px)">
+          <img class="contacts__map-image" src="img/map-mobile.png" alt="Карта с адресом">
+        </picture>
+      </noscript>
       <iframe class="contacts__map" width="320" height="362"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627402720056!5m2!1sru!2sru"
         allowfullscreen="" loading="lazy"></iframe>
@@ -185,7 +195,7 @@
       </ul>
       <div class="developer">
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="developer__link developer__link--icon" href="https://htmlacademy.ru/intensive/adaptive"><span
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive"><span
             class="visually-hidden">Логотип-ссылка компании Html Academy</span></a>
       </div>
     </div>

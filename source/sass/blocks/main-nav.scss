@@ -75,7 +75,12 @@
     font-size: 20px;
     line-height: 30px;
     padding: 0;
-    color: var(--basic-background);
+  }
+
+  &--main-page {
+    @media (min-width: $desktop-width) {
+      color: var(--basic-background);
+    }
   }
 
   &:hover:not(.main-nav__link[aria-current="page"]) {
@@ -103,7 +108,9 @@
     cursor: default;
     text-decoration: underline solid var(--basic-button) 2px;
     text-underline-offset: 12px;
+  }
 
+  &--main-page[aria-current="page"] {
     @media (min-width: $tablet-width) {
       text-decoration: underline solid var(--basic-background) 2px;
     }

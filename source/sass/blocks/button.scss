@@ -14,10 +14,20 @@
   transition: all 0.1s;
 
   @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
-    width: 244px;
-    padding: 14px;
+    width: 248px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 168px;
+  }
+
+  &--main-page {
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+      width: 244px;
+      padding: 14px;
+    }
   }
 
   &:hover {
