@@ -24,7 +24,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 110px;
-    margin-right: calc(110px - 100vw + 100%);
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
   }
 }
