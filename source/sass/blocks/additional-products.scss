@@ -1,18 +1,6 @@
 .additional-products {
   position: relative;
 
-  &::before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 268px;
-    height: 10px;
-    background-color: var(--basic-background);
-    z-index: -1;
-  }
-
   &::after {
     display: block;
     content: "";
@@ -22,17 +10,42 @@
     height: 2px;
     background-color: var(--special-button);
     z-index: -2;
+
+    @media (min-width: $tablet-width) {
+      top: 88px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 95px;
+    }
   }
 }
 
 .additional-products__container {
-  display: flex;
-  flex-direction: column;
   padding-top: 20px;
   padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 68px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 75px;
+    padding-bottom: 86px;
+  }
+}
+
+.additional-products__inner-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .additional-products__title {
+  display: inline-block;
+  position: relative;
   font-family: var(--special-font);
   color: var(--special-fcolor);
   font-size: 24px;
@@ -40,6 +53,32 @@
   font-weight: 400;
   margin: 0;
   margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 80px;
+    margin-left: 36px;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    bottom: 0;
+    margin: 0 auto;
+    width: 115%;
+    height: 100%;
+    background-color: var(--basic-background);
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      left: -35px;
+      width: 120%;
+    }
+  }
 }
 
 .additional-products__list {
@@ -50,13 +89,22 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 36px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
 }
 
 .additional-products__item {
   width: 100%;
-  border-top: 1px solid var(--basic-border);
 
-  &:last-child {
-    border-bottom: 1px solid var(--basic-border);
+  &:not(:last-child) {
+    margin-bottom: -1px;
   }
 }

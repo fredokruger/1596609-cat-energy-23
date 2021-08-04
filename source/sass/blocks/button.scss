@@ -67,6 +67,10 @@
 
   &--additional {
     width: 100%;
+
+    @media (min-width: $desktop-width) {
+      width: 244px;
+    }
   }
 
   &--submit {

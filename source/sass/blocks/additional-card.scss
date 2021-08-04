@@ -2,6 +2,37 @@
   min-width: 280px;
   padding-top: 13px;
   padding-bottom: 19px;
+  border-top: 1px solid var(--basic-border);
+  border-bottom: 1px solid var(--basic-border);
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid var(--basic-border);
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 17px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.additional-card__inner-container {
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 .additional-card__title {
@@ -13,6 +44,12 @@
   color: var(--additional-fcolor);
   margin: 0;
   margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+  }
 }
 
 .additional-card__features {
@@ -20,9 +57,31 @@
   width: 280px;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+  }
 }
 
 .additional-card__amount {
   margin: 0;
+}
+
+.additional-card__feature:not(:first-child) {
+  @media (min-width: $tablet-width) {
+    margin-left: 48px;
+  }
+}
+
+.additional-card__button {
+  @media (min-width: $desktop-width) {
+    margin-left: 38px;
+  }
 }
