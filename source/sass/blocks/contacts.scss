@@ -50,6 +50,11 @@
   justify-content: space-between;
   width: 100%;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   @media (min-width: $desktop-width) {
     align-items: center;
     min-height: 201px;

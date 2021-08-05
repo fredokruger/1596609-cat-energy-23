@@ -1,51 +1,153 @@
+.select-form__layout-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-rows: 1fr;
+    column-gap: 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 69px;
+    padding: 0 30px;
+  }
+}
+
+//Внутренние контейнеры блоков
+.select-form__container {
+  &--personal {
+    @media (min-width: $desktop-width) {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+  }
+
+  &--contact,
+  &--comment,
+  &--additional {
+    position: relative;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 13px;
+      width: 100%;
+      height: 2px;
+      background-color: var(--special-button);
+      z-index: -2;
+
+      @media (min-width: $tablet-width) {
+        top: 20px;
+      }
+    }
+  }
+
+  &--porpose {
+    border-top: 1px solid var(--basic-border);
+    border-bottom: 1px solid var(--basic-border);
+    margin-bottom: 26px;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+      margin-bottom: 75px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-row: 1/2;
+      grid-column: 2/3;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.select-form__inner-container {
+  margin-left: 20px;
+  margin-right: calc(20px - 100vw + 100%);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 30px;
+    margin-right: calc(30px - 100vw + 100%);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  &--personal,
+  &--porpose {
+    @media (min-width: $desktop-width) {
+      padding: 0;
+      height: 100%;
+    }
+  }
+}
+
+//Группы формы
 .select-form__group {
   margin: 0;
   padding: 0;
   border: none;
 
   &--personal {
+    display: grid;
+    row-gap: 14px;
     margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
+      row-gap: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 
   &--porpose {
+    display: grid;
+    row-gap: 13px;
     padding-top: 22px;
     padding-bottom: 20px;
-    border-top: 1px solid var(--basic-border);
-    border-bottom: 1px solid var(--basic-border);
-    margin-bottom: 26px;
+
+    @media (min-width: $tablet-width) {
+      padding: 25px 28px;
+      border: 1px solid var(--basic-border);
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 27px 28px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 
   &--contact {
-    position: relative;
-    margin-bottom: 9px;
+    margin-bottom: 24px;
 
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 0;
-      width: 221px;
-      height: 10px;
-      background-color: var(--basic-background);
-      z-index: -1;
+    @media (min-width: $tablet-width) {
+      margin-bottom: 65px;
     }
 
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 15px;
-      width: 100%;
-      height: 2px;
-      background-color: var(--special-button);
-      z-index: -2;
+    @media (min-width: $desktop-width) {
+      margin-bottom: 69px;
     }
   }
 
   &--comment {
     position: relative;
     margin-bottom: 23px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 65px;
+    }
 
     &::before {
       display: block;
@@ -58,22 +160,15 @@
       background-color: var(--basic-background);
       z-index: -1;
     }
-
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 15px;
-      width: 100%;
-      height: 2px;
-      background-color: var(--special-button);
-      z-index: -2;
-    }
   }
 
   &--additional {
     position: relative;
     margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 54px;
+    }
 
     &::before {
       display: block;
@@ -86,44 +181,54 @@
       background-color: var(--basic-background);
       z-index: -1;
     }
+  }
+}
 
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 15px;
-      width: 100%;
-      height: 2px;
-      background-color: var(--special-button);
-      z-index: -2;
+.select-form__list {
+  display: grid;
+
+  &--additional {
+    row-gap: 13px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 565px;
+      grid-template-columns: repeat(auto-fill, 221px);
+      column-gap: 123px;
+      row-gap: 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 100%;
+      grid-template-columns: repeat(auto-fill, 221px);
+      column-gap: 104px;
+    }
+  }
+
+  &--contact {
+    row-gap: 14px;
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 78px;
     }
   }
 }
 
+//Айтемы формы
 .select-form__item {
-  &--personal,
-  &--contact {
+  &--personal {
     display: flex;
     align-items: center;
-    margin-bottom: 14px;
-  }
-
-  &--porpose:not(:last-child) {
-    margin-bottom: 13px;
-  }
-
-  &--comment {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &--additional:not(:last-child) {
-    margin-bottom: 13px;
   }
 
   &--submit {
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
 //Имя, возраст, вес
@@ -133,6 +238,11 @@
   line-height: 18px;
   text-transform: uppercase;
   margin-right: 12px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .select-form__input-personal {
@@ -147,6 +257,11 @@
   outline: none;
   width: 100%;
   flex: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &::placeholder {
     color: inherit;
@@ -166,7 +281,7 @@
 }
 //Цель приема
 .select-form__porpose {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-family: var(--special-font);
   font-size: 16px;
@@ -177,6 +292,11 @@
   transition: all 0.1s;
   cursor: pointer;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::before {
     content: "";
     width: 30px;
@@ -184,6 +304,11 @@
     border-radius: 50%;
     border: 1px solid var(--basic-border);
     margin-right: 15px;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &::after {
@@ -193,6 +318,12 @@
     height: 13.5px;
     border-radius: 50%;
     left: 8.25px;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+      left: 11px;
+    }
   }
 
   .select-form__check-porpose:checked ~ &::after {
@@ -222,24 +353,74 @@
   }
 }
 //Телефон и почта
+.select-form__group-title-info {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+  }
+}
+
 .select-form__group-title {
   font-family: var(--special-font);
   font-size: 24px;
   line-height: 26px;
   color: var(--special-fcolor);
   margin: 0;
-  width: 188px;
+  position: relative;
+  display: inline-block;
+  max-width: 70%;
+
+  @media (min-width: $tablet-width) {
+    max-width: 70%;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    bottom: 0;
+    margin: 0 auto;
+    width: calc(100% + 30px);
+    height: 100%;
+    background-color: var(--basic-background);
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      width: calc(100% + 70px);
+      left: -40px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 
   &--contact {
     margin-bottom: 35px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 76px;
+    }
   }
 
   &--comment {
     margin-bottom: 38px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 76px;
+    }
   }
 
   &--additional {
     margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 57px;
+    }
   }
 }
 
@@ -252,6 +433,11 @@
   display: flex;
   align-items: center;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .select-form__input-contact {
@@ -267,6 +453,11 @@
   width: 100%;
   flex: 1;
   margin-left: 11px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &::placeholder {
     color: inherit;
@@ -329,7 +520,7 @@
 //Комментарий
 
 .select-form__input-comment {
-  padding: 13px 16px;
+  padding: 13px;
   border: 1px solid var(--form-border);
   text-transform: uppercase;
   font-size: 16px;
@@ -338,9 +529,15 @@
   color: inherit;
   transition: all 0.1s;
   outline: none;
+  width: 100%;
   height: 150px;
   resize: none;
-  white-space: nowrap;
+
+  @media (min-width: $tablet-width) {
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &::placeholder {
     color: inherit;
@@ -358,7 +555,7 @@
 }
 //Дополнительно
 .select-form__additional {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-family: var(--special-font);
   font-size: 16px;
@@ -369,23 +566,39 @@
   transition: all 0.1s;
   cursor: pointer;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::before {
     content: "";
     width: 30px;
     height: 30px;
     border: 1px solid var(--basic-border);
     margin-right: 15px;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &::after {
     position: absolute;
     content: "";
-    width: 26px;
-    height: 26px;
-    left: 2px;
-    background: url("../../img/check.svg") no-repeat 50% 50%;
+    width: 18px;
+    height: 14px;
+    left: 6px;
+    background: url("../../img/check.svg") no-repeat 50% 50% / cover;
     opacity: 0;
     transition: all 0.1s;
+
+    @media (min-width: $tablet-width) {
+      left: 9px;
+      width: 24px;
+      height: 18px;
+    }
   }
 
   .select-form__check-additional:checked ~ &::after {
@@ -417,6 +630,10 @@
 //Кнопка
 .select-form__button {
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .select-form__attention-info {
@@ -425,4 +642,8 @@
   font-size: 14px;
   line-height: 16px;
   color: var(--special-fcolor);
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 }

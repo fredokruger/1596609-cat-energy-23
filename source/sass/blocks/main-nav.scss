@@ -111,7 +111,7 @@
   }
 
   &--main-page[aria-current="page"] {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $desktop-width) {
       text-decoration: underline solid var(--basic-background) 2px;
     }
   }

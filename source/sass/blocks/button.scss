@@ -26,7 +26,7 @@
       font-size: 20px;
       line-height: 20px;
       width: 244px;
-      padding: 14px;
+      padding: 17px 10px;
     }
   }
 
@@ -76,5 +76,16 @@
   &--submit {
     cursor: pointer;
     border: none;
+
+    @media (min-width: $tablet-width) {
+      width: 282px;
+      font-size: 20px;
+      padding: 17px 10px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 568px;
+      font-size: 20px;
+    }
   }
 }

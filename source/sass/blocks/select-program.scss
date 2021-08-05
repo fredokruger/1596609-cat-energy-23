@@ -1,10 +1,36 @@
 .select-program {
+  padding-top: 28px;
+  padding-bottom: 32px;
   border-top: 1px solid var(--basic-border);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 41px;
+    padding-bottom: 72px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+    padding-bottom: 82px;
+  }
 }
 
 .select-program__container {
-  padding-top: 27px;
-  padding-bottom: 32px;
+  margin-left: 20px;
+  margin-right: calc(20px - 100vw + 100%);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 30px;
+    margin-right: calc(30px - 100vw + 100%);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
 }
 
 .select-program__title {
@@ -15,6 +41,16 @@
   color: var(--special-fcolor);
   margin: 0;
   margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .select-program__info {
@@ -25,4 +61,10 @@
   margin: 0;
   margin-bottom: 39px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
 }
