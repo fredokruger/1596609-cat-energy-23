@@ -13,7 +13,7 @@ function initMap() {
     markerImage = '../img/map-marker-mobile.png';
   }
 
-  map = new google.maps.Map(document.querySelector(".contacts__map"), {
+  let map = new google.maps.Map(document.querySelector(".contacts__map"), {
     zoom: 15,
     disableDefaultUI: true,
     center: centerCoordinates,

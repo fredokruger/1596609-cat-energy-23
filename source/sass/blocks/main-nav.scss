@@ -136,13 +136,15 @@
 
   &[aria-current="page"] {
     cursor: default;
-    text-decoration: underline solid var(--basic-button) 2px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--basic-button);
     text-underline-offset: 12px;
   }
 
   &--main-page[aria-current="page"] {
     @media (min-width: $desktop-width) {
-      text-decoration: underline solid var(--basic-background) 2px;
+      text-decoration-color: var(--basic-background);
     }
   }
 }
