@@ -51,6 +51,7 @@
   background-color: var(--special-fcolor);
   position: relative;
   margin: 0 auto;
+  transition: all 0s 0.1s;
 
   &::before,
   &::after {
@@ -63,27 +64,33 @@
     right: 0;
     left: 0;
     top: 8px;
+    transition: transform 0.1s, top 0.1s 0.1s;
   }
 
   &::before {
+    transform: rotate(0);
     top: -8px;
   }
 
   &::after {
+    transform: rotate(0);
     top: 8px;
   }
 }
 
 .nav-toggle__burger--active {
   background-color: transparent;
+  transition: all 0s 0.1s;
 
   &::after {
+    transition: top 0.1s, transform 0.1s 0.1s;
     top: 0;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
   }
 
   &::before {
+    transition: top 0.1s, transform 0.1s 0.1s;
     top: 0;
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
   }
 }

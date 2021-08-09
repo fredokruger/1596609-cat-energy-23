@@ -1,9 +1,39 @@
+@keyframes nav-visible {
+  from {
+    transform: translate(0, -30px);
+    opacity: 0.1;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes nav-hidden {
+  from {
+    transform: translate(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(0, -30px);
+    opacity: 0.1;
+  }
+}
+
 .main-nav {
   display: none;
   background-color: var(--basic-background);
 
   &--visible {
-    display: block;
+    animation-name: nav-visible;
+    animation-duration: 0.2s;
+  }
+
+  &--hidden {
+    animation-name: nav-hidden;
+    animation-duration: 0.2s;
   }
 
   @media (min-width: $tablet-width) {

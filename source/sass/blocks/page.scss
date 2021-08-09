@@ -15,12 +15,13 @@
 }
 
 .page__leveler {
-  margin-left: 20px;
-  margin-right: calc(20px - 100vw + 100%);
+  --content-indent: calc(20px + (10vw - 32px) / 4.48);
+  margin-left: var(--content-indent);
+  margin-right: calc(var(--content-indent) - var(--scrollbar));
 
   @media (min-width: $tablet-width) {
     margin-left: 30px;
-    margin-right: calc(30px - 100vw + 100%);
+    margin-right: calc(30px - var(--scrollbar));
   }
 
   @media (min-width: $desktop-width) {

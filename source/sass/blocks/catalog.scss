@@ -5,7 +5,7 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 30px;
-    margin-right: calc(30px - 100vw + 100%);
+    margin-right: calc(30px - var(--scrollbar));
     padding-top: 40px;
     padding-bottom: 68px;
     border: none;
