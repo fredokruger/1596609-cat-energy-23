@@ -15,9 +15,8 @@
 }
 
 .page__leveler {
-  --content-indent: calc(20px + (10vw - 32px) / 4.48);
-  margin-left: var(--content-indent);
-  margin-right: calc(var(--content-indent) - var(--scrollbar));
+  margin-left: 20px;
+  margin-right: calc(20px - var(--scrollbar));
 
   @media (min-width: $tablet-width) {
     margin-left: 30px;

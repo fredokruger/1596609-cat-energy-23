@@ -8,6 +8,10 @@
   text-align: center;
   position: relative;
 
+  &--no-js {
+    visibility: hidden;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }

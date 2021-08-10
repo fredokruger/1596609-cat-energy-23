@@ -1,6 +1,11 @@
 let mainNav = document.querySelector('.main-nav');
 let navToggle = document.querySelector('.nav-toggle');
 let burgerImage = document.querySelector('.nav-toggle__burger');
+//отключение модификатора nj-js
+mainNav.classList.remove('page-header__main-nav--no-js');
+mainNav.classList.remove('main-nav--no-js');
+navToggle.classList.remove('nav-toggle--no-js');
+
 
 navToggle.addEventListener('click', function () {
   burgerImage.classList.toggle('nav-toggle__burger--active');
