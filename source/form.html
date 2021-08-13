@@ -183,9 +183,10 @@
       </div>
       <noscript>
         <picture>
-          <source srcset="img/map-desktop.png" media="(min-width: 1280px)">
-          <source srcset="img/map-tablet.png" media="(min-width: 768px)">
-          <img class="contacts__map-image" src="img/map-mobile.png" alt="Карта с адресом">
+          <source media="(min-width: 1280px)" srcset="img/map-desktop@1x.png, img/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png, img/map-tablet@2x.png 2x">
+          <img class="contacts__map-image" srcset="img/map-mobile@1x.png, img/map-mobile@2x.png 2x"
+            alt="Карта с адресом">
         </picture>
       </noscript>
       <div class="contacts__map" style="height: 362px;"></div>

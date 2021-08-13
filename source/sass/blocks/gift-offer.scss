@@ -34,14 +34,22 @@
   height: 289px;
   padding: 43px 20px;
   margin: 0 auto;
-  background: url("../../img/gift-background-mobile.png") no-repeat top center;
+  background: url("../../img/gift-background-mobile@1x.png") no-repeat top center;
+
+  @media (min-resolution: 1.5dppx) {
+    background: url("../../img/gift-background-mobile@2x.png") no-repeat top center;
+  }
 
   @media (min-width: $tablet-width) {
     height: 200px;
     width: 708px;
     align-items: center;
     justify-content: flex-end;
-    background: url("../../img/gift-background-tablet.png") no-repeat top center;
+    background: url("../../img/gift-background-tablet@1x.png") no-repeat top center;
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 1.5dppx) {
+    background: url("../../img/gift-background-tablet@2x.png") no-repeat top center;
   }
 
   @media (min-width: $desktop-width) {
@@ -50,7 +58,11 @@
     align-items: flex-end;
     align-self: center;
     justify-content: center;
-    background: url("../../img/gift-background-desktop.png") no-repeat center center;
+    background: url("../../img/gift-background-desktop@1x.png") no-repeat center center;
+  }
+
+  @media (min-width: $desktop-width) and (min-resolution: 1.5dppx) {
+    background: url("../../img/gift-background-desktop@2x.png") no-repeat center center;
   }
 
   &::before {
