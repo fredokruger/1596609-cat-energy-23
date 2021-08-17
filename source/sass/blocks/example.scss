@@ -78,38 +78,17 @@
 .example__stats-list {
   font-family: var(--special-font);
   margin-bottom: 297px;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 611px;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: block;
-    margin-bottom: 0;
-  }
-}
-
-.example__stats-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 124px);
-  column-gap: 31px;
-  row-gap: 20px;
+  display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
-    max-width: 55%;
-    grid-template-columns: repeat(auto-fill, 162px);
-    column-gap: 42px;
+    margin-bottom: 611px;
+    justify-content: flex-start;
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: start;
-    max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 }
 
@@ -123,10 +102,15 @@
   height: 64px;
   border: 1px solid var(--special-border);
   border-radius: 3px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
     width: 162px;
     height: 72px;
+  }
+
+  &:not(:nth-last-child(2)) {
+    margin-right: 30px;
   }
 }
 
@@ -177,6 +161,7 @@
   text-transform: uppercase;
   display: flex;
   justify-content: center;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
@@ -185,11 +170,14 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 15px;
+    margin-left: auto;
+    width: auto;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     margin: 0;
+    width: 100%;
   }
 }
 

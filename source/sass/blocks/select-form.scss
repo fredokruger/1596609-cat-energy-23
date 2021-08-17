@@ -301,7 +301,7 @@
     border: 1px solid var(--radio-border);
   }
 
-  &:active {
+  &:disabled {
     opacity: 0.3;
   }
 }
@@ -564,7 +564,7 @@
     border: 1px solid var(--radio-border);
   }
 
-  &:active {
+  &:disabled {
     opacity: 0.3;
   }
 }

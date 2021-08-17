@@ -86,19 +86,19 @@
     }
   }
 
-  &:nth-child(1)::before {
+  &--icon-leaf::before {
     background: url("../../img/how-it-works-1.svg") no-repeat 50% 50% / cover;
   }
 
-  &:nth-child(2)::before {
+  &--icon-powder::before {
     background: url("../../img/how-it-works-2.svg") no-repeat 50% 50% / cover;
   }
 
-  &:nth-child(3)::before {
+  &--icon-cutlery::before {
     background: url("../../img/how-it-works-3.svg") no-repeat 50% 50% / cover;
   }
 
-  &:nth-child(4)::before {
+  &--icon-clock::before {
     background: url("../../img/how-it-works-4.svg") no-repeat 50% 50% / cover;
   }
 
