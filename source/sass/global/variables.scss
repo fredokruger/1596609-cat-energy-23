@@ -20,6 +20,8 @@
   --basic-font: "Arial", sans-serif;
   --special-font: "Oswald", "Arial", sans-serif;
   --scrollbar: calc(100vw - 100%);
+  --filter: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
+  --promo-bg: linear-gradient(to right, #4e4d53 50%, #444348 100%);
 }
 
 $tablet-width: 768px;
