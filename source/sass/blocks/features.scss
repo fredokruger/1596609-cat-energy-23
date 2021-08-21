@@ -77,6 +77,9 @@
     margin-right: 20px;
     width: 60px;
     height: 60px;
+    background-color: var(--basic-button);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 
     @media (min-width: $tablet-width) {
       width: 80px;
@@ -87,19 +90,23 @@
   }
 
   &--icon-leaf::before {
-    background: url("../../icons/how-it-works-1.svg") no-repeat 50% 50% / cover;
+    background-image: url("../../icons/leaf-icon.svg");
+    background-size: 25px 28px;
   }
 
   &--icon-powder::before {
-    background: url("../../icons/how-it-works-2.svg") no-repeat 50% 50% / cover;
+    background-image: url("../../icons/powder-icon.svg");
+    background-size: 29px 31px;
   }
 
   &--icon-cutlery::before {
-    background: url("../../icons/how-it-works-3.svg") no-repeat 50% 50% / cover;
+    background-image: url("../../icons/cultery-icon.svg");
+    background-size: 25px 30px;
   }
 
   &--icon-clock::before {
-    background: url("../../icons/how-it-works-4.svg") no-repeat 50% 50% / cover;
+    background-image: url("../../icons/clock-icon.svg");
+    background-size: 32px 33px;
   }
 
   &::after {

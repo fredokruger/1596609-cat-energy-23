@@ -37,8 +37,8 @@
     left: 22px;
     top: 21px;
     width: 50px;
-    height: 50px;
-    background: url("../../icons/slim-cat.svg") no-repeat center center / cover;
+    height: 53px;
+    background: url("../../icons/slimcat-icon.svg") no-repeat center center / cover;
 
     @media (min-width: $tablet-width) {
       width: 200px;
@@ -67,7 +67,7 @@
     top: 24px;
     width: 67px;
     height: 50px;
-    background: url("../../icons/pro-cat.svg") no-repeat center center / cover;
+    background: url("../../icons/procat-icon.svg") no-repeat center center / contain;
 
     @media (min-width: $tablet-width) {
       width: 268px;
