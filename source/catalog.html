@@ -17,9 +17,10 @@
     <div class="page-header__container page__leveler">
       <a class="logo-link" href="index.html" aria-current="page">
         <span class="visually-hidden">Ссылка на главную страницу</span>
-        <picture class="logo-image">
-          <source srcset="img/logo-tablet-desktop.svg" media="(min-width: 768px)">
-          <img src="img/logo-mobile.svg" alt="Логотип продукта">
+        <picture>
+          <source srcset="img/logo-sprite.svg#logo-desktop" media="(min-width: 1280px)">
+          <source srcset="img/logo-sprite.svg#logo-tablet" media="(min-width: 768px)">
+          <img class="logo-link__image" src="img/logo-sprite.svg#logo-mobile" alt="Логотип продукта">
         </picture>
       </a>
       <a class="logo-link logo-link--text-header" href="index.html">
@@ -398,7 +399,8 @@
     <div class="page-footer__container page__leveler">
       <div class="page-footer__logo-container">
         <a class="logo-link" href="index.html" aria-current="page"><img class="page-footer__logo-image"
-            src="img/logo-text.svg" alt="Логотип кродукта" width="128" height="24"><span class="visually-hidden">Ссылка
+            src="img/logo-sprite.svg#logo-text" alt="Логотип кродукта" width="128" height="24"><span
+            class="visually-hidden">Ссылка
             на главную страницу</span></a>
       </div>
       <ul class="social">

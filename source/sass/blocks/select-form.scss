@@ -437,7 +437,7 @@
       margin: auto 0;
       width: 20px;
       height: 14px;
-      mask: url("../../img/email-icon.svg") no-repeat 50% 50%;
+      mask: url("../../icons/email-icon.svg") no-repeat 50% 50%;
       background-color: var(--additional-fcolor);
       cursor: default;
     }
@@ -453,7 +453,7 @@
       margin: auto 0;
       width: 20px;
       height: 20px;
-      mask: url("../../img/phone-icon.svg") no-repeat 50% 50%;
+      mask: url("../../icons/phone-icon.svg") no-repeat 50% 50%;
       background-color: var(--additional-fcolor);
     }
   }
@@ -531,7 +531,7 @@
     width: 18px;
     height: 14px;
     left: 6px;
-    background: url("../../img/check.svg") no-repeat 50% 50% / cover;
+    background: url("../../icons/check.svg") no-repeat 50% 50% / cover;
     opacity: 0;
     transition: all 0.1s;
 
