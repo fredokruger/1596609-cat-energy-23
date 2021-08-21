@@ -1,7 +1,7 @@
 function initMap() {
   let coordinates = { lat: 59.938916705952764, lng: 30.322972921767455 };
   let centerCoordinates;
-  let markerImage = 'icons/map-pin-logo.svg';
+  let markerImage = 'img/map-pin.svg';
   if (window.matchMedia("(min-width: 1280px)").matches) {
     centerCoordinates = { lat: 59.93883740459927, lng: 30.32066093815554 };
   } else {

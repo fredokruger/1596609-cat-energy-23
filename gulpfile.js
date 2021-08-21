@@ -70,7 +70,7 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(squoosh())
     .pipe(gulp.dest("build/img"))
 }
@@ -78,7 +78,7 @@ const optimizeImages = () => {
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(gulp.dest("build/img"))
 }
 
@@ -164,9 +164,10 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/js/*.js", gulp.series("scripts"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
+  gulp.watch("source/js/*.js", gulp.series(scripts, reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/icons/**/*.svg", gulp.series(sprite, reload));
 }
 
 // Build

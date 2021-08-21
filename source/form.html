@@ -8,7 +8,7 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -25,7 +25,9 @@
       </a>
       <a class="logo-link logo-link--text-header" href="index.html">
         <span class="visually-hidden">Ссылка на главную страницу</span>
-        <img class="logo-image" src="img/logo-sprite.svg#logo-text" alt="Логотип продукта" width="101" height="18">
+        <svg class="logo-link__text" width="101" height="18">
+          <use href="img/logo-sprite.svg#logo-text"></use>
+        </svg>
       </a>
       <button class="nav-toggle nav-toggle--no-js">
         <span class="visually-hidden">Открыть меню</span>
@@ -214,8 +216,8 @@
       </div>
     </div>
   </footer>
-  <script src="js/menu-burger.js"></script>
-  <script src="js/map.js"></script>
+  <script src="js/menu-burger.min.js"></script>
+  <script src="js/map.min.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyrZVt2WNptaHjJNUikGzZCYQXT9XdmH4&callback=initMap&libraries=&v=weekly"
     async></script>
