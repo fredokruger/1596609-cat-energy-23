@@ -2,9 +2,11 @@
   line-height: 0;
   text-decoration: none;
   position: relative;
+  color: var(--more-items);
 
   @media (min-width: $tablet-width) {
     align-self: flex-start;
+    color: var(--basic-fcolor);
   }
 
   &::after {
@@ -17,10 +19,14 @@
   }
 
   &--text-header {
-    margin: 0 auto;
+    margin: auto;
 
     @media (min-width: $tablet-width) {
-      display: none;
+      margin-left: 12px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 14px;
     }
   }
 
@@ -56,12 +62,19 @@
   height: 38px;
 
   @media (min-width: $tablet-width) {
-    width: 174px;
+    width: 61px;
     height: 51px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 202px;
+    width: 71px;
     height: 59px;
+  }
+}
+
+.logo-link__text {
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
   }
 }
