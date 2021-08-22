@@ -57,6 +57,11 @@
         <div class="promo__image-container">
           <picture>
             <source media="(min-width: 1280px)"
+              srcset="img/main-product-desktop@1x.webp, img/main-product-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)"
+              srcset="img/main-product-tablet@1x.webp, img/main-product-tablet@2x.webp 2x" type="image/webp">
+            <source srcset="img/main-product-mobile@1x.webp, img/main-product-mobile@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1280px)"
               srcset="img/main-product-desktop@1x.png, img/main-product-desktop@2x.png 2x">
             <source media="(min-width: 768px)"
               srcset="img/main-product-tablet@1x.png, img/main-product-tablet@2x.png 2x">
@@ -130,11 +135,16 @@
         <div class="example__slider slider">
           <div class="slider__images">
             <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-fat@1x.webp, img/cat-fat@2x.webp 2x" type="image/webp">
+              <source srcset="img/cat-fat-mobile@1x.webp, img/cat-fat-mobile@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/cat-fat@1x.png, img/cat-fat@2x.png 2x">
               <img class="slider__image slider__image--before" src="img/cat-fat-mobile@1x.png"
                 srcset="img/cat-fat-mobile@2x.png 2x" alt="Состояние кота до приема Cat Energy">
             </picture>
             <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-skinny@1x.webp, img/cat-skinny@2x.webp 2x"
+                type="image/webp">
+              <source srcset="img/cat-skinny-mobile@1x.webp, img/cat-skinny-mobile@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/cat-skinny@1x.png, img/cat-skinny@2x.png 2x">
               <img class="slider__image slider__image--after" src="img/cat-skinny-mobile@1x.png"
                 srcset="img/cat-skinny-mobile@2x.png 2x" alt="Состояние кота до приема Cat Energy">
@@ -161,6 +171,11 @@
       </div>
       <noscript>
         <picture>
+          <source media="(min-width: 1280px)" srcset="img/map-desktop@1x.webp, img/map-desktop@2x.webp 2x"
+            type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.webp, img/map-tablet@2x.webp 2x"
+            type="image/webp">
+          <source srcset="img/map-mobile@1x.webp, img/map-mobile@2x.webp 2x" type="image/webp">
           <source media="(min-width: 1280px)" srcset="img/map-desktop@1x.png, img/map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png, img/map-tablet@2x.png 2x">
           <img class="contacts__map-image" src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x"
