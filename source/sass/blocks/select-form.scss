@@ -198,14 +198,15 @@
   }
 }
 
-.select-form__input-personal {
+.select-form__input-personal,
+.select-form__input-personal:placeholder-shown {
   padding: 13px 40px 13px 16px;
   border: 1px solid var(--form-border);
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
   font-family: var(--special-font);
-  color: inherit;
+  color: var(--special-fcolor);
   transition: all 0.1s;
   outline: none;
   width: 100%;
@@ -217,11 +218,18 @@
   }
 
   &::placeholder {
-    color: inherit;
+    color: var(--basic-fcolor);
   }
 
   &:hover {
     border: 1px solid var(--special-border);
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid var(--form-focus);
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding-left: 15px;
   }
 
   &:active,
@@ -230,6 +238,10 @@
     margin-top: -1px;
     margin-bottom: -1px;
     padding-left: 15px;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
   }
 }
 //Цель приема
@@ -381,14 +393,15 @@
   }
 }
 
-.select-form__input-contact {
+.select-form__input-contact,
+.select-form__input-contact:placeholder-shown {
   padding: 13px 40px 13px 16px;
   border: 1px solid var(--form-border);
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
   font-family: var(--special-font);
-  color: inherit;
+  color: var(--special-fcolor);
   transition: all 0.1s;
   outline: none;
   width: 100%;
@@ -401,7 +414,7 @@
   }
 
   &::placeholder {
-    color: inherit;
+    color: var(--basic-fcolor);
   }
 
   &:hover {
@@ -416,8 +429,24 @@
     padding-left: 15px;
   }
 
-  &:focus ~ .select-form__icon-contact::before {
+  &:focus ~ .select-form__icon-contact::before,
+  &:valid ~ .select-form__icon-contact::before {
     background-color: var(--basic-button);
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid var(--form-focus);
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding-left: 15px;
+  }
+
+  &:invalid:not(:focus):not(:placeholder-shown) ~ .select-form__icon-contact::before {
+    background-color: var(--form-focus);
   }
 }
 
@@ -467,7 +496,7 @@
   font-size: 16px;
   line-height: 18px;
   font-family: var(--special-font);
-  color: inherit;
+  color: var(--special-fcolor);
   transition: all 0.1s;
   outline: none;
   width: 100%;
@@ -481,7 +510,7 @@
   }
 
   &::placeholder {
-    color: inherit;
+    color: var(--basic-fcolor);
   }
 
   &:hover {
@@ -491,7 +520,11 @@
   &:active,
   &:focus {
     border: 2px solid var(--basic-fcolor);
-    padding: 12px 15px;
+    padding: 12px;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
   }
 }
 //Дополнительно
@@ -586,5 +619,21 @@
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
+  }
+}
+
+.select-form__required--alert,
+.select-form__required--alert:placeholder-shown {
+  border: 2px solid var(--form-focus);
+  margin-top: -1px;
+  margin-bottom: -1px;
+  padding-left: 15px;
+
+  &:invalid ~ .select-form__icon-contact::before {
+    background-color: var(--form-focus);
+  }
+
+  &:hover {
+    border: 2px solid var(--form-focus);
   }
 }

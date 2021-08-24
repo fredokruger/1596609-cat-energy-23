@@ -63,13 +63,13 @@
                 <legend class="visually-hidden">Личные данные кота</legend>
                 <div class="select-form__item--personal">
                   <label class="select-form__personal" for="personal-name">Имя:*</label>
-                  <input class="select-form__input-personal" id="personal-name" type="text" name="name"
-                    placeholder="Барсик" minlength="2" required>
+                  <input class="select-form__input-personal select-form__required" id="personal-name" type="text"
+                    name="name" placeholder="Барсик" pattern="^[А-Яа-яёЁ]+$" title="Введите имя на кириллице" required>
                 </div>
                 <div class="select-form__item--personal">
                   <label class="select-form__personal" for="personal-weight">Вес (кг):*</label>
-                  <input class="select-form__input-personal" id="personal-weight" type="number" name="weight"
-                    placeholder="7" max="99" required>
+                  <input class="select-form__input-personal select-form__required" id="personal-weight" type="number"
+                    name="weight" placeholder="7" max="99" required>
                 </div>
                 <div class="select-form__item--personal">
                   <label class="select-form__personal" for="personal-age">Возраст (лет)</label>
@@ -110,14 +110,16 @@
               <div class="select-form__list select-form__list--contact">
                 <div class="select-form__item select-form__item--contact">
                   <label class="select-form__contact select-form__contact--email">E-mail:*
-                    <input class="select-form__input-contact" type="email" name="email"
-                      placeholder="kuklachev@gmail.com" required><span
+                    <input class="select-form__input-contact select-form__required" type="email" name="email"
+                      placeholder="kuklachev@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><span
                       class="select-form__icon-contact select-form__icon-contact--email"></span></label>
                 </div>
                 <div class="select-form__item select-form__item--contact">
                   <label class="select-form__contact select-form__contact--tel">Телефон:*
-                    <input class="select-form__input-contact" type="tel" name="tel" placeholder="8 (960) 900-60-90"
-                      required><span class="select-form__icon-contact select-form__icon-contact--tel"></span></label>
+                    <input class="select-form__input-contact select-form__input-contact--tel select-form__required"
+                      type="tel" name="tel" placeholder="+7 (960) 900-60-90"
+                      pattern="\+7\s?[\(]{1}[0-9]{3}[\)]{1}\s?\d{3}[-]{1}\d{2}[-]{1}\d{2}" required><span
+                      class="select-form__icon-contact select-form__icon-contact--tel"></span></label>
                 </div>
               </div>
             </fieldset>
@@ -222,6 +224,8 @@
     </div>
   </footer>
   <script src="js/menu-burger.min.js"></script>
+  <script src="js/tel-mask.min.js"></script>
+  <script src="js/form-validation.min.js"></script>
   <script src="js/map.min.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyrZVt2WNptaHjJNUikGzZCYQXT9XdmH4&callback=initMap&libraries=&v=weekly"
