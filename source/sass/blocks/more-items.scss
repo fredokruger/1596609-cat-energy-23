@@ -9,7 +9,7 @@
 
   @media (min-width: $tablet-width) {
     width: 324px;
-    height: 84%;
+    min-height: 430px;
     padding-bottom: 38px;
     margin-top: auto;
     border: 2px solid var(--special-background);

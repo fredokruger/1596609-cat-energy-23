@@ -8,14 +8,14 @@
       content: "";
       position: absolute;
       display: block;
-      height: 620px;
+      min-height: 620px;
       width: 100%;
       top: 0;
       background-color: var(--basic-background);
       z-index: -1;
 
       @media (min-width: $desktop-width) {
-        height: 194px;
+        min-height: 194px;
       }
     }
   }
@@ -98,15 +98,16 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 124px;
-  height: 64px;
+  min-width: 124px;
+  min-height: 64px;
   border: 1px solid var(--special-border);
   border-radius: 3px;
   margin-bottom: 34px;
+  padding: 10px;
 
   @media (min-width: $tablet-width) {
-    width: 162px;
-    height: 72px;
+    min-width: 162px;
+    min-height: 72px;
   }
 
   &:not(:nth-last-child(2)) {
@@ -132,7 +133,7 @@
   font-size: 12px;
   line-height: 12px;
   text-align: center;
-  bottom: -15px;
+  top: 80%;
   display: flex;
   justify-content: center;
   z-index: 2;
@@ -144,7 +145,7 @@
     font-size: 14px;
     line-height: 14px;
     max-width: 140px;
-    bottom: -7px;
+    top: 87%;
     padding: 0 10px;
     background-color: var(--basic-background);
   }

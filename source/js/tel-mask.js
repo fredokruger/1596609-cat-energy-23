@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
-  [].forEach.call(document.querySelectorAll('.select-form__input-contact--tel'), function (input) {
+  [].forEach.call(document.querySelectorAll(".select-form__input-contact--tel"), function (input) {
     let keyCode;
     function mask(event) {
       event.keyCode && (keyCode = event.keyCode);
