@@ -13,8 +13,12 @@
 
 .slider__images-container {
   display: grid;
-  --curtain-position: 50%;
+  --curtain-position: 100%;
   grid-template-columns: var(--curtain-position) calc(100% - var(--curtain-position));
+
+  @media (min-width: $tablet-width) {
+    --curtain-position: 50%;
+  }
 }
 
 .slider__image {
@@ -25,7 +29,12 @@
   display: block;
   width: 100%;
   object-fit: cover;
-  height: 520px;
+  height: 240px;
+
+  @media (min-width: $tablet-width) {
+    height: 520px;
+  }
+
 
   &--before {
     object-position: 0%;
@@ -68,16 +77,15 @@
 
 .slider__handle {
   height: 4px;
-  width: calc(50% - 6px);
-  position: absolute;
+  width: 50%;
   margin: auto 0;
-  left: 6px;
   background-color: var(--basic-button);
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.1s;
 
   @media (min-width: $tablet-width) {
+    position: absolute;
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -126,6 +134,7 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--special-fcolor);
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
