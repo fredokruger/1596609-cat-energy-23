@@ -44,12 +44,10 @@
   display: grid;
   justify-content: center;
   justify-items: center;
-  max-width: 80%;
-  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     grid-template-rows: repeat(4, auto);
-    grid-template-columns: 80% auto;
+    grid-template-columns: 90% auto;
     justify-content: start;
     justify-items: start;
     padding: 38px 30px 0 90px;
@@ -57,8 +55,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 37% auto;
-    padding: 90px 30px 0 80px;
+    grid-template-columns: 39% auto;
+    padding: 90px 30px 0 110px;
     margin-bottom: 136px;
   }
 }
@@ -135,6 +133,6 @@
     grid-row: 1/5;
     grid-column: 2/3;
     margin-top: -82px;
-    margin-left: -40px;
+    margin-left: -75px;
   }
 }

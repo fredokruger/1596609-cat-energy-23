@@ -8,6 +8,7 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -133,22 +134,27 @@
           </dl>
         </div>
         <div class="example__slider slider">
-          <div class="slider__images">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/cat-fat@1x.webp, img/cat-fat@2x.webp 2x" type="image/webp">
-              <source srcset="img/cat-fat-mobile@1x.webp, img/cat-fat-mobile@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/cat-fat@1x.png, img/cat-fat@2x.png 2x">
-              <img class="slider__image slider__image--before" src="img/cat-fat-mobile@1x.png"
-                srcset="img/cat-fat-mobile@2x.png 2x" alt="Состояние кота до приема Cat Energy">
-            </picture>
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/cat-skinny@1x.webp, img/cat-skinny@2x.webp 2x"
-                type="image/webp">
-              <source srcset="img/cat-skinny-mobile@1x.webp, img/cat-skinny-mobile@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/cat-skinny@1x.png, img/cat-skinny@2x.png 2x">
-              <img class="slider__image slider__image--after" src="img/cat-skinny-mobile@1x.png"
-                srcset="img/cat-skinny-mobile@2x.png 2x" alt="Состояние кота до приема Cat Energy">
-            </picture>
+          <div class="slider__images-container">
+            <div class="slider__image slider__image--before">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-fat@1x.webp, img/cat-fat@2x.webp 2x"
+                  type="image/webp">
+                <source srcset="img/cat-fat-mobile@1x.webp, img/cat-fat-mobile@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/cat-fat@1x.png, img/cat-fat@2x.png 2x">
+                <img class="slider__picture slider__picture--before" src="img/cat-fat-mobile@1x.png"
+                  srcset="img/cat-fat-mobile@2x.png 2x" alt="Состояние кота до приема Cat Energy">
+              </picture>
+            </div>
+            <div class="slider__image slider__image--after">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-skinny@1x.webp, img/cat-skinny@2x.webp 2x"
+                  type="image/webp">
+                <source srcset="img/cat-skinny-mobile@1x.webp, img/cat-skinny-mobile@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/cat-skinny@1x.png, img/cat-skinny@2x.png 2x">
+                <img class="slider__picture slider__picture--after" src="img/cat-skinny-mobile@1x.png"
+                  srcset="img/cat-skinny-mobile@2x.png 2x" alt="Состояние кота до приема Cat Energy">
+              </picture>
+            </div>
           </div>
           <div class="slider__range">
             <span class="slider__condition">Было</span>
@@ -209,6 +215,7 @@
     </div>
   </footer>
   <script src="js/menu-burger.min.js"></script>
+  <script src="js/slider.min.js"></script>
   <script src="js/map.min.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyrZVt2WNptaHjJNUikGzZCYQXT9XdmH4&callback=initMap&libraries=&v=weekly"

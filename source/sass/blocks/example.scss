@@ -71,19 +71,19 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 69px;
-    max-width: 66%;
+    max-width: 80%;
   }
 }
 
 .example__stats-list {
   font-family: var(--special-font);
-  margin-bottom: 297px;
+  margin: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 611px;
     justify-content: flex-start;
   }
 
@@ -192,5 +192,13 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 63px;
+  }
+}
+
+.example__slider {
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -48px;
   }
 }
