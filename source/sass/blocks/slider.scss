@@ -17,7 +17,7 @@
   grid-template-columns: var(--curtain-position) calc(100% - var(--curtain-position));
 
   @media (min-width: $tablet-width) {
-    --curtain-position: 50%;
+    --curtain-position: calc(50% - 0.01px);
   }
 }
 
@@ -82,7 +82,8 @@
   background-color: var(--basic-button);
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.1s;
+  transition: border 0.1s;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -126,6 +127,11 @@
       border: 1px solid var(--basic-button);
     }
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
+  }
 }
 
 .slider__condition {
@@ -135,9 +141,15 @@
   text-transform: uppercase;
   color: var(--special-fcolor);
   cursor: pointer;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
   }
 }
