@@ -9,11 +9,10 @@ const mediaQuery = window.matchMedia('(min-width: 768px)');
 function rezizeChecker() {
   let isActive = false;
 
+  imageContainer.style.setProperty('--curtain-position', '');
   if (mediaQuery.matches) {
-    imageContainer.style.setProperty('--curtain-position', '');
     change.style.transform = '';
   } else {
-    imageContainer.style.setProperty('--curtain-position', '');
     change.style.left = '';
   }
 
@@ -76,6 +75,15 @@ function rezizeChecker() {
     }
   });
 
+  scale.addEventListener('touchstart', () => {
+    if (mediaQuery.matches) {
+      isActive = true;
+      body.style.overflow = 'hidden';
+    } else {
+      return
+    }
+  });
+
   body.addEventListener('touchend', () => {
     if (mediaQuery.matches) {
       isActive = false;
@@ -111,6 +119,8 @@ function rezizeChecker() {
   }, { passive: false });
 
   scale.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
     if (mediaQuery.matches) {
       let x = e.pageX;
       x -= scale.getBoundingClientRect().left;
@@ -151,8 +161,5 @@ function rezizeChecker() {
     }
   });
 }
-
-window.addEventListener('resize', () => {
-  rezizeChecker()
-})
 rezizeChecker()
+
