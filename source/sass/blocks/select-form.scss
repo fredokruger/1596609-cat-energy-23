@@ -236,6 +236,7 @@
     border: 2px solid var(--form-focus);
     margin-top: -1px;
     margin-bottom: -1px;
+    margin-right: -1px;
     padding-left: 15px;
   }
 
@@ -244,6 +245,7 @@
     border: 2px solid var(--basic-fcolor);
     margin-top: -1px;
     margin-bottom: -1px;
+    margin-right: -1px;
     padding-left: 15px;
   }
 
@@ -530,8 +532,8 @@
 
   &:active,
   &:focus {
-    border: 2px solid var(--basic-fcolor);
     padding: 12px;
+    border: 2px solid var(--basic-fcolor);
   }
 
   &:focus::placeholder {
