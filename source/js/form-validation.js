@@ -11,7 +11,7 @@ for (let i = 0; i < inputRequired.length; i++) {
 
     if (inputRequired[i].checkValidity() == false) {
       e.preventDefault();
-      inputRequired[i].scrollIntoView({ block: "center" });
+      inputRequired[i].scrollIntoView({ block: 'center' });
       inputRequired[i].classList.add('select-form__required--alert');
     }
   })
