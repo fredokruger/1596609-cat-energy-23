@@ -82,7 +82,7 @@
   margin: auto 0;
   background-color: var(--basic-button);
   border-radius: 6px;
-  cursor: pointer;
+  cursor: grab;
   transition: border 0.1s;
   outline: none;
 
@@ -124,6 +124,8 @@
   }
 
   &:active {
+    cursor: grabbing;
+
     @media (min-width: $tablet-width) {
       border: 1px solid var(--basic-button);
     }
@@ -141,12 +143,20 @@
   line-height: 20px;
   text-transform: uppercase;
   color: var(--special-fcolor);
-  cursor: pointer;
-  outline: none;
+  border: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:focus {
+    outline: 2px solid var(--special-fcolor);
+    outline-offset: 2px;
+  }
+
+  &:not(:focus-visible) {
+    outline: none;
   }
 
   &:focus-visible {
