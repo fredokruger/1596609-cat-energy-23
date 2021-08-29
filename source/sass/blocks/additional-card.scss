@@ -43,7 +43,7 @@
   font-weight: 400;
   color: var(--additional-fcolor);
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -83,5 +83,6 @@
 .additional-card__button {
   @media (min-width: $desktop-width) {
     margin-left: 38px;
+    flex-shrink: 0;
   }
 }

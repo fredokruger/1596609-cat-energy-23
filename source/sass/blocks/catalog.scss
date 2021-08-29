@@ -1,5 +1,5 @@
 .catalog__container {
-  padding-top: 22px;
+  padding-top: 30px;
   border-bottom: 1px solid var(--basic-border);
   border-top: 1px solid var(--basic-border);
 
@@ -7,7 +7,7 @@
     margin-left: 30px;
     margin-right: calc(30px - var(--scrollbar));
     padding-top: 40px;
-    padding-bottom: 68px;
+    padding-bottom: 30px;
     border: none;
   }
 
@@ -25,7 +25,7 @@
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 37px;
   text-align: center;
 
   @media (min-width: $tablet-width) {

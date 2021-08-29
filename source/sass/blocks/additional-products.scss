@@ -1,9 +1,9 @@
 .additional-products__container {
-  padding-top: 20px;
+  padding-top: 26px;
   padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 68px;
+    padding-top: 40px;
     padding-bottom: 76px;
   }
 
@@ -28,7 +28,7 @@
   line-height: 24px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   width: fit-content;
 
   @media (min-width: $tablet-width) {

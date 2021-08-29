@@ -15,9 +15,14 @@
   display: grid;
   --curtain-position: 100%;
   grid-template-columns: var(--curtain-position) calc(100% - var(--curtain-position));
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     --curtain-position: calc(50% - 0.01px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
   }
 }
 

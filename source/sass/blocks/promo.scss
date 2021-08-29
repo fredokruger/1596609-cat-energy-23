@@ -69,7 +69,7 @@
   font-size: 36px;
   line-height: 36px;
   color: var(--basic-background);
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     grid-row: 1/2;
@@ -106,6 +106,7 @@
   line-height: 14px;
   color: var(--basic-background);
   text-transform: uppercase;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     grid-row: 2/3;
