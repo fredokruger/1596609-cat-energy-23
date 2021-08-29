@@ -85,6 +85,20 @@
   }
 }
 
+.promo__info-container {
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 2/3;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 2/3;
+    margin-bottom: 52px;
+  }
+}
+
 .promo__slogan {
   font-family: var(--special-font);
   text-align: center;
@@ -92,7 +106,6 @@
   line-height: 14px;
   color: var(--basic-background);
   text-transform: uppercase;
-  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     grid-row: 2/3;
@@ -100,12 +113,10 @@
     font-size: 20px;
     line-height: 20px;
     color: var(--special-fcolor);
-    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
     grid-row: 2/3;
-    margin-bottom: 52px;
   }
 }
 

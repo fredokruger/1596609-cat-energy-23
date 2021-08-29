@@ -19,7 +19,8 @@
   }
 
   &--text-header {
-    margin: auto;
+    margin: 0 auto;
+    margin-top: 21px;
 
     @media (min-width: $tablet-width) {
       margin-left: 12px;
