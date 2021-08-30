@@ -59,7 +59,7 @@ function rezizeChecker() {
     if (mediaQuery.matches) {
       let shift = Math.max(0, Math.min(x, scale.offsetWidth));
       change.style.left = 100 * shift / scale.offsetWidth + '%';
-      let width = 100 - 100 * shift / scale.offsetWidth + 0.01 + '%';
+      let width = 100 - 100 * shift / scale.offsetWidth + '%';
       imageContainer.style.setProperty('--curtain-position', width);
     } else {
       return;
